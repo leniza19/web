@@ -1,0 +1,12 @@
+.newsContent {
+	font-size: 16px;
+	color: #006;
+	background-color: #F1F1F1;
+	font-size: 13px;
+	border-bottom-style: double;
+	border-width: 1px;
+}
+
+.newsAlignCenter {
+	text-align: center;
+}

@@ -1,0 +1,82 @@
+<%@page contentType="text/html;charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>ИНК РАН</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<LINK rel="shortcut icon" type="image/x-icon" href="images/chem.png">
+
+<link rel="stylesheet" href="css/login-styles.css">
+<link rel="stylesheet" href="css/news.css">
+
+<script language="javascript" type="text/javascript" src="./jquery/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="./jquery/jquery.flot.js"></script>
+<script language="javascript" type="text/javascript" src="./jquery/jquery.flot.axislabels.js"></script>    
+    
+<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/flot.js"></script>
+<script type="text/javascript" src="./js/vizual.js"></script>
+<script type="text/javascript" src="./js/maininfo.js"></script>
+
+</head>
+
+<body onload="onld();">
+	<div id="container">
+		<div id="header">
+			<h2>Web-лаборатория математической химии</h2>
+			<!-- Begin Page Content -->
+    <div id="container3">
+        <form action = "controller" method = "POST">
+            <label for="username" class="labelLogin">Логин:</label>
+            <input type="text" id="username" name="username">
+            <label for="password" class="labelLogin">Пароль:</label>           
+            <input type="password" id="password" name="password">
+			<input type="submit" value="Вход">
+            <!--<div id="lower">
+                <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
+                <input type="submit" value="Login">
+            </div>
+			<!--/ lower-->
+        </form>
+    </div><!--/ container-->
+	<div id="loginButton" onclick="func();">
+	</div>
+    <!-- End Page Content -->
+		</div>
+		
+		<div id="left">
+			<div id="menu14">
+				<ul>
+					<li><a href="list-news-items?group=1"><span>Новости</span></a></li>
+<!-- 					<li><a href="list-user-items"><span>Пользователи</span></a></li> -->
+					<li><a href="controller?go=about"><span>О лаборатории</span></a></li>				
+					<li><a href="controller?go=employee"><span>Сотрудники</span></a></li>
+					<!-- <li><a href="controller"><span>Главная</span></a></li> -->	
+					<li><a href="list-reaction-items"><span>База данных КИ</span></a></li>					
+					
+					<li><a href="list-article-items"><span>Публикации</span></a></li>
+					<li><b>Расчеты:</b></li>
+					<li><a href="controller?go=oxygen-info"><span>-- Окис. регенерация</span></a></li>
+					<li><a href="peroksid"><span>   -- Разложение H<sub>2</sub>O<sub>2</sub></span></a></li>
+					<li><a href="controller?go=etilen-info"><span>-- Окисление окиси этилена</span></a></li>					 
+					
+					<% if (session.getAttribute("id") != null) { 
+						int currentId = Integer.parseInt(session.getAttribute("id").toString());
+					if (currentId==2) { 
+					%>
+					<!-- <li><a href="list-article-items"><span>Публикации</span></a></li>
+					<li><b>Расчеты:</b></li>
+					<li><a href="controller?go=oxygen-info"><span>-- Окислительная регенерация</span></a></li>
+					<li><a href="peroksid"><span>   -- Разложение H<sub>2</sub>O<sub>2</sub></span></a></li>
+					<li><a href="controller?go=etilen-info"><span>-- Окисление окиси этилена</span></a></li>
+					<li><a href="controller?go=etilen-info"><span>-- Пиролиз этана</span></a></li>  -->
+					<%
+					}
+					}%>
+						
+					<% if (session.getAttribute("id") != null) { %> 
+					<li><a href="logout"><span>Выйти</span></a></li>
+					<% }%>
+				</ul>
+			</div>
+		</div>    

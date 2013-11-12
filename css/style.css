@@ -59,7 +59,7 @@ h2 {
     padding: 0px; 
     float: left; 
     background-color: #787878; 
-    background: url(Images/chemistry-5.jpg) right bottom no-repeat;
+    background: url(../img/styles/chemistry-5.jpg) right bottom no-repeat;
 }
 #content {
     margin-left: 200px; 

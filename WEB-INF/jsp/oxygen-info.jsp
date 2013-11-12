@@ -12,7 +12,7 @@ id="oxygenInfoFlashOuter" align="middle">
 	<param name="quality" value="high" />
 	<param name="allowFullScreen" value="true" /> 
 	<param name="bgcolor" value="#ffffff" />
-	<embed src="./images/oxygenRegeneration.swf" quality="high" bgcolor="#ffffff"
+	<embed src="./img/styles/oxygenRegeneration.swf" quality="high" bgcolor="#ffffff"
 	id="oxygenInfoFlashInner"
  	name="oxygenRegeneration" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
 </object>

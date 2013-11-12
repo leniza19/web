@@ -4,7 +4,7 @@
 <head>
 <title>ИНК РАН</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-<LINK rel="shortcut icon" type="image/x-icon" href="images/chem.png">
+<LINK rel="shortcut icon" type="image/x-icon" href="img/styles/chem.png">
 
 <link rel="stylesheet" href="css/login-styles.css">
 <link rel="stylesheet" href="css/news.css">

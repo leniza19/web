@@ -42,12 +42,12 @@ function func() {
 	{
 		document.getElementById("container3").style.top = "-"+document.getElementById("container3").offsetHeight+"px";
 		document.getElementById("loginButton").style.top = "0px";
-		document.getElementById("loginButton").style.backgroundImage = "url('img/arrow_down.png')";
+		document.getElementById("loginButton").style.backgroundImage = "url('img/styles/arrow_down.png')";
 	}
 	else if (btnTop = "0")
 	{
 		document.getElementById("container3").style.top = "0px";
 		document.getElementById("loginButton").style.top = document.getElementById("container3").offsetHeight+"px";
-		document.getElementById("loginButton").style.backgroundImage = "url('img/arrow_up.png')";
+		document.getElementById("loginButton").style.backgroundImage = "url('img/styles/arrow_up.png')";
 	}
 }

@@ -19,10 +19,12 @@ h2 {
 }
 #header {
     height: 33px;
-    font-size: 1.0em; 
+    font-size: 2.0em; 
     text-align: left; 
     padding: 10px; 
-    background: #8FB3EB; 
+    background: #789AF3; 
+    
+    
     background: -moz-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* Firefox 3.6+ */
     /* Chrome 1-9, Safari 4-5 */
     background: -webkit-gradient(linear, left top, left bottom, 
@@ -56,7 +58,8 @@ h2 {
     width: 201px; 
     padding: 0px; 
     float: left; 
-    background-color: lightgoldenrodyellow; 
+    background-color: #787878; 
+    background: url(Images/chemistry-5.jpg) right bottom no-repeat;
 }
 #content {
     margin-left: 200px; 
@@ -65,8 +68,8 @@ h2 {
 	overflow-y: scroll;
 }
 #footer {
-    background: #E1774A; 
-    color: #fff; 
+    background: MidnightBlue; 
+    color: LightGray; 
     padding: 5px; 
     clear: left; 
     border-top: 2px white solid;
@@ -132,13 +135,15 @@ img {
         text-decoration: none;
 		color: #006;
         display: block;
-		background-color: #FC9;
+		background-color: SteelBlue;
         padding: 1px 8px;
 		margin-top: 1px;
         }
 #menu14 li a:hover {
-		background-color: #FF9966;
+		color: CornflowerBlue;
         }
+        
+
 		
 		
 .menu {
@@ -155,18 +160,22 @@ img {
    .menu a {
     display: inline-block;
     color: #fff;
-    background: #E1774A;
+    background: MediumSlateBlue;
     text-align: center;
     text-decoration: none;
-    border: 2px #900 solid;
+    border: 2px DeepSkyBlue solid;
     padding: 1px;
 	cursor: pointer;
    }
-   /*.menu a:hover {
+
+
+   
+   .menu a:hover {
     color: #900;
     background: #fff;
-   /* border-bottom-color: #fff; 
-   /*}*/
+   border-bottom-color: #fff; 
+   }
+   
    .menu li.current {
     display: inline-block;
     color: #900;

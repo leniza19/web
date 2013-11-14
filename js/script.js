@@ -1,13 +1,12 @@
 $(document).ready(function() {
-	
-	$.getJSON('json/test.json', function(data) {
-		var myItems = [];
-		
-		//myItems = data.items;
-		$.each(data, function(key,val) {
-			//alert(val);
-		})
-	});
+//	var myItems = [];
+//	$.getJSON('json/irekmars.json', function(data) {
+//				
+//		myItems = data.items;
+//		$.each(data, function(key,val) {
+//			//alert(val);
+//		})
+//	});
 	
 	//var jsonp = '[{"lang": "jQuery","ID":"1"},{"lang":"C","ID":"2"}]';
 	//var obj = $.parseJSON(jsonp);

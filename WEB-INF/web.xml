@@ -109,6 +109,7 @@ version="2.4">
    <servlet>
       <servlet-name>peroksid</servlet-name>
       <servlet-class>mathchem.web.PeroksidServlet</servlet-class>
+      
    </servlet>
 
    <servlet-mapping>
@@ -118,12 +119,30 @@ version="2.4">
    
    <servlet>
       <servlet-name>irekmars</servlet-name>
-      <servlet-class>mathchem.web.employee.IrekmarsServlet</servlet-class>
+      <servlet-class>mathchem.web.employee.EmployeeServlet</servlet-class>
+      <init-param>
+            <param-name>employeeName</param-name>
+            <param-value>irekmars</param-value>
+        </init-param>
    </servlet>
 
    <servlet-mapping>
       <servlet-name>irekmars</servlet-name>
       <url-pattern>/irekmars</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+      <servlet-name>spivak</servlet-name>
+      <servlet-class>mathchem.web.employee.EmployeeServlet</servlet-class>
+      <init-param>
+            <param-name>employeeName</param-name>
+            <param-value>spivak</param-value>
+        </init-param>
+   </servlet>
+   
+   <servlet-mapping>
+      <servlet-name>spivak</servlet-name>
+      <url-pattern>/spivak</url-pattern>
    </servlet-mapping>
    
    <servlet>

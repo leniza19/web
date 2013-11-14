@@ -16,7 +16,7 @@
 <script type="text/javascript" src="./js/script.js"></script>
 <script type="text/javascript" src="./js/flot.js"></script>
 <script type="text/javascript" src="./js/vizual.js"></script>
-<script type="text/javascript" src="./js/maininfo.js"></script>
+<script type="text/javascript" src="./js/employee_info.js"></script>
 
 </head>
 

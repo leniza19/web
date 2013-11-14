@@ -1,18 +1,3 @@
-$(document).ready(function() {
-//	var myItems = [];
-//	$.getJSON('json/irekmars.json', function(data) {
-//				
-//		myItems = data.items;
-//		$.each(data, function(key,val) {
-//			//alert(val);
-//		})
-//	});
-	
-	//var jsonp = '[{"lang": "jQuery","ID":"1"},{"lang":"C","ID":"2"}]';
-	//var obj = $.parseJSON(jsonp);
-	
-});
-
 function onld() {
 	
 	//document.getElementById("container3").style.top = "-"+document.getElementById("container3").offsetHeight+"px";

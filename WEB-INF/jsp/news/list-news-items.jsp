@@ -7,6 +7,7 @@
 <%@ include file="../top.jspf" %>
    
 
+<div id="main-content">
 <div id="content">
 <h2>Новости</h2>
 
@@ -56,5 +57,6 @@
 	} %>
 	</tr>
 </table>
+</div>
 </div>
 <%@ include file="../bottom.inc" %>

@@ -1,8 +1,8 @@
 <%@page contentType="text/html;charset=UTF-8"%>
 <%@ include file="top.jspf" %>
 
-<div id="content">
-  
+<div id="main-content">
+  <div id="content">
 <h2>О лаборатории математической химии</h2>
 <!-- <img src="./images/matmod-200x133.jpg" align="left"> -->
 <p>Лаборатория создана на основе переехавшей в 1976 г. в 
@@ -82,6 +82,6 @@
 оптимизация процессов позволила найти оптимальные технологические режимы, 
 позволяющие увеличить выход целевых продуктов на 5-7%мас. при селективностях 
 не ниже 92%:</p>
-  
+  </div>
 </div>
 <%@ include file="bottom.inc" %>

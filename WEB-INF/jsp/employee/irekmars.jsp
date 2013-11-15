@@ -2,19 +2,16 @@
 <%@ page import="java.util.Iterator"%>
 <%@ include file="../top.jspf" %>
 <ul class="menu">
-   <li onclick="showMainInfo()" ><a>Информация</a></li>
-   <li onclick="showArticles()" ><a>Основные публикации</a></li>
-   <li onclick="showStudents()" ><a>Аспиранты</a></li>
+   <li id="li1" onclick="showMainInfo('maininfo')" ><a>Информация</a></li>
+   <li onclick="showMainInfo('articles')" ><a>Основные публикации</a></li>
+   <li onclick="showMainInfo('aspirants')" ><a>Аспиранты</a></li>
   </ul>
 
-<div id="content">
+	<script type="text/javascript">
+		document.getElementById('li1').onclick();
+    </script>
 
-<div onload="showMainInfo()">
-<%@ include file="irekmars-biograph.jspf" %>
-<%@ include file="irekmars-articles.jspf" %>
-<%@ include file="irekmars-students.jspf" %>
-
-</div>
+<div id="content" style="display: block">
    
 </div>
 <%@ include file="../bottom.inc" %>

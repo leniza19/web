@@ -55,17 +55,23 @@ h2 {
 #left {
     margin: 0px;
     margin-left: 0px;
-    width: 201px; 
+    width: 200px; 
     padding: 0px; 
     float: left; 
-    background-color: #787878; 
-    background: url(../img/styles/chemistry-5.jpg) right bottom no-repeat;
+    /*background-color: #787878;*/ 
+    background: black url(../img/styles/chemistry-5.jpg) right bottom no-repeat;
 }
 #content {
-    margin-left: 200px; 
-    padding: 10px; 
+    margin: 0px; 
+    float: none; 
+    padding: 10px;   
     background: #fff; 
-	overflow-y: scroll;
+	overflow-y: scroll;	
+}
+#main-content {
+    margin-left: 200px; 
+    /*padding: 10px;*/ 
+    background: #fff; 	
 }
 #footer {
     background: #FF8719; 
@@ -167,24 +173,21 @@ img {
     padding: 1px;
 	cursor: pointer;
    }
-
-
-   
+ 
    .menu a:hover {
     color: #900;
     background: #fff;
-   border-bottom-color: #fff; 
+   	border-bottom-color: #fff; 
    }
    
    .menu li.current {
-    display: inline-block;
     color: #900;
-    background: #fff; 
-    text-align: center;
-    border: 2px #900 solid; 
-    border-bottom-color: #fff; 
-    padding: 1px;
-	text-decoration: none;
+    background: #fff;
+   	border-bottom-color: #fff; 
+   }
+   
+   .menu li.unselected {
+    
    }
    
    .tbl_thin { border-collapse: collapse; border: 1px solid #999999; }

@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="css/login-styles.css">
 <link rel="stylesheet" href="css/news.css">
+<link rel="stylesheet" href="css/top-menu.css">
 
 <script language="javascript" type="text/javascript" src="./jquery/jquery.js"></script>
 <script language="javascript" type="text/javascript" src="./jquery/jquery.flot.js"></script>
@@ -16,7 +17,7 @@
 <script type="text/javascript" src="./js/script.js"></script>
 <script type="text/javascript" src="./js/flot.js"></script>
 <script type="text/javascript" src="./js/vizual.js"></script>
-<script type="text/javascript" src="./js/maininfo.js"></script>
+<script type="text/javascript" src="./js/employee_info.js"></script>
 
 </head>
 

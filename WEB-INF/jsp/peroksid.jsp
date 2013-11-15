@@ -8,23 +8,33 @@
 <jsp:useBean id="constItems" scope="request" type="java.util.List" />
 
 <%@ include file="top.jspf" %>
-<ul class="menu">
-   <li onclick="showInfo()" ><a>Общая информация</a></li>
-   <li onclick="drawPlotPeroksid(); showselectTemperDiv();" ><a>Расчеты</a></li>
+<!-- <ul class="menu">
+   <li class="current" onclick="showInfo()" ><a>Общая информация</a></li>
+   <li class="unselected" onclick="drawPlotPeroksid(); showselectTemperDiv();" ><a>Расчеты</a></li>
    <li onclick="showCalculator()" ><a>Калькулятор молярности</a></li>
    <li onclick="showVizual()" ><a>Визуализация</a></li>
   </ul>
+ -->
+ 
+ 
+<div id="main-content">
+<div style="float:left;width: 100%; background:#FF0000;">
+	<div class="top-menu current-tab" onclick="showInfo(); changeCurrentTab(this)">Общая информация</div>
+	<div class="top-menu standart-tab" onclick="drawPlotPeroksid(); showselectTemperDiv(); changeCurrentTab(this)">Расчеты</div>
+	<div class="top-menu standart-tab" onclick="showCalculator(); changeCurrentTab(this)">Калькулятор молярности</div>
+	<div class="top-menu standart-tab" onclick="showVizual(); changeCurrentTab(this)">Визуализация</div>
+</div>
 
 <div id="content">
 <!-- для презентации -->
 <!-- <div id="peroksidPlot" style="width:300px;height:150px"> -->
 <!-- <div id="peroksidPlot" style="width:580px;height:370px"> -->
-<div id="topOfRight">
+<div id="topOfRight" style="clear:left; margin: 10px; ">
 <div id="peroksidPlot" style="width:500px;height:250px; display: none"></div>
 <div id="peroksidPlot2" style="width:500px;height:250px; display: none"></div>
 </div>
 
-<div id="bottomOfRight">
+<div id="bottomOfRight" style="clear:left; margin: 10px;">
 <div id="mainInfo" >
 <h2>Моделирование каталитической активности металлосиликатов в реакции окисления фенолов водным расвором перекиси водорода
 </h2>
@@ -155,6 +165,7 @@ style="float: left; margin-right: 5px; width:580px;">
 		</tr>
 		<% } %>
 	</table>
+</div>
 </div>
 </div>
 </div>

@@ -3,11 +3,11 @@
 <%@ include file="top.jspf" %>
   
 <div id="main-content">
-	<div style="float:left;width: 100%; background:#FFA753; ">
-	<div class="top-menu cuttent-tab" onclick="goToPage('controller?go=oxygen-info'); ">Общая информация</div>
-	<div class="top-menu standart-tab" onclick="goToPage('controller?go=zerno-form');">Расчеты</div>
-	<div class="top-menu standart-tab" onclick="goToPage('controller?go=isoterm-form'); changeCurrentTab(this)">Калькулятор молярности</div>
-	<div class="top-menu cuttent-tab" onclick="goToPage('controller?go=move-form'); changeCurrentTab(this)">Визуализация</div>
+ <div style="float:left;width: 100%; background:#FFA753; ">
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=oxygen-info'); ">Информация</div>
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=zerno-form');">Зерно катализатора</div>
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=isoterm-form');">Неподвижный слой</div>
+	<div class="top-menu current-tab" onclick="goToPage('controller?go=move-form');">Движущийся слой</div>
 	</div>
 	
 	<div id="content">

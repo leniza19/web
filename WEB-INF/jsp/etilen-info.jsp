@@ -1,9 +1,10 @@
 <%@page contentType="text/html;charset=UTF-8"%>
 <%@ include file="top.jspf" %>
-  <ul class="menu">
-   <li class="current">Информация</li>
-  </ul>
 
+<div id="main-content">
+<div style="float:left;width: 100%; background:#FFA753; ">
+	<div class="top-menu current-tab">Общая информация</div>	
+</div>
 <div id="content">
    Окисление окиси этилена описывается следующим уравнением:
    <br>
@@ -35,6 +36,6 @@ c1=[C2H4O]
 
 <br><br>Реакция (1), протекающая по механизму (2), в реакторе идеального перемешивания описывается системой обыкновенных дифференциальных уравнений:
 
-
+</div>
 </div>
 <%@ include file="bottom.inc" %>

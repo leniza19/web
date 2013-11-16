@@ -9,7 +9,7 @@ body {
 h2 {
     font-size: 15px; 
     text-align: left;
-    color: #006; 
+    
     margin-top: 0;
 }
 #container {
@@ -17,23 +17,31 @@ h2 {
     margin: 0 auto; 
     background: #F3F8F8;
 }
+#container h2{
+	color: #FF8719;
+}
 #header {
     height: 50px;
     font-size: 3.0em; 
     text-align: left; 
     padding: 10px; 
+<<<<<<< HEAD
     background: #3366FF; 
     
+=======
+    background: #8FABFF url(../img/styles/mathchem.png) no-repeat; 
+>>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
     
+    /*
     background: -moz-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* Firefox 3.6+ */
     /* Chrome 1-9, Safari 4-5 */
-    background: -webkit-gradient(linear, left top, left bottom, 
+    /*background: -webkit-gradient(linear, left top, left bottom, 
                 color-stop(0%,#fefcea), color-stop(100%,#f1da36));
     /* Chrome 10+, Safari 5.1+ */
-    background: -webkit-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB );
-    background: -o-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* Opera 11.10+ */
-    background: -ms-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* IE10 */
-    background: linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* CSS3 */ 
+    /*background: -webkit-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB );
+    /*background: -o-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* Opera 11.10+ */
+    /*background: -ms-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* IE10 */
+    /*background: linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* CSS3 */ 
     /*background-image: url('images/header.jpg');
     background-repeat: no-repeat;
     background-position: top right;*/
@@ -49,17 +57,19 @@ h2 {
     font-size: 20px; 
     text-align: center;
     margin-top: 0px; 
+    color: #1136a6; 
 }
 
 
 #left {
     margin: 0px;
     margin-left: 0px;
-    width: 200px; 
+    width: 199px; 
     padding: 0px; 
     float: left; 
+    border-right: 1px solid lightgray;
     /*background-color: #787878;*/ 
-    background: black url(../img/styles/chemistry-5.jpg) right bottom no-repeat;
+    /*background: black url(../img/styles/chemistry-5.jpg) right bottom no-repeat;*/
 }
 #content {
     margin: 0px; 
@@ -74,11 +84,19 @@ h2 {
     background: #fff; 	
 }
 #footer {
+<<<<<<< HEAD
     background: #FF8719; 
     color: LightGray; 
     padding: 5px; 
     clear: left; 
     border-top: 1px white solid;
+=======
+    background: rgba(255,235,129,0.6);; 
+    color: #A68D08; 
+    padding: 5px; 
+    clear: left; 
+    border-top: 2px #FFE453 solid;
+>>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
 }
 
 
@@ -138,15 +156,24 @@ img {
           voice-family: "\"}\"";
           voice-family: inherit;
           height: 24px;
-        text-decoration: none;
-		color: #006;
+        /*text-decoration: none;*/
+		color: #1136A6;
         display: block;
+<<<<<<< HEAD
 		background-color: #668CAA;
+=======
+		/*background-color: SteelBlue;*/
+>>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
         padding: 1px 8px;
 		margin-top: 1px;
         }
 #menu14 li a:hover {
+<<<<<<< HEAD
 		color: #668CFF;
+=======
+		/*color: CornflowerBlue;*/
+		background: rgba(255,190,129,0.5);
+>>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
         }
         
 

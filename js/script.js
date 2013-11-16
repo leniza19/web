@@ -39,6 +39,10 @@ function func() {
 }
 function changeCurrentTab(obj) {
 	var elements = document.getElementsByClassName("current-tab");
-	elements[0].className = "top-menu standart-tab";
+	if (elements.length>0)	elements[0].className = "top-menu standart-tab";
 	obj.className = "top-menu current-tab";
+}
+
+function goToPage (url) {					
+	document.location.href = url;		
 }

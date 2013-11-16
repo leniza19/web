@@ -1,10 +1,16 @@
 <%@page contentType="text/html;charset=UTF-8"%>
 
 <%@ include file="top.jspf" %>
-<%@ include file="middle.inc" %>
   
-<div id="content">
-
+<div id="main-content">
+	<div style="float:left;width: 100%; background:#FFA753; ">
+	<div class="top-menu cuttent-tab" onclick="goToPage('controller?go=oxygen-info'); ">Общая информация</div>
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=zerno-form');">Расчеты</div>
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=isoterm-form'); changeCurrentTab(this)">Калькулятор молярности</div>
+	<div class="top-menu cuttent-tab" onclick="goToPage('controller?go=move-form'); changeCurrentTab(this)">Визуализация</div>
+	</div>
+	
+	<div id="content">
  <form action = "chart-page" method = "POST">
     <table border="1" cellpadding="5"    
     style="border-collapse: collapse;border: 1px solid black;">
@@ -73,5 +79,6 @@
     </tr>
     </table>
     </form>
+    </div>
 </div>
 <%@ include file="bottom.inc" %>

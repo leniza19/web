@@ -1,7 +1,17 @@
 <%@page contentType="text/html;charset=UTF-8"%>
 
 <%@ include file="top.jspf" %>
-<%@ include file="middle.inc" %> 
+<%--<%@ include file="middle.inc" %> --%>
+ 
+ <div id="main-content">
+ 
+ <div style="float:left;width: 100%; background:#FFA753; ">
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=oxygen-info'); ">Информация</div>
+	<div class="top-menu current-tab" onclick="goToPage('controller?go=zerno-form');">Зерно катализатора</div>
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=isoterm-form');">Неподвижный слой</div>
+	<div class="top-menu standart-tab" onclick="goToPage('controller?go=move-form');">Движущийся слой</div>
+	</div>
+	
  <div id="content">
    <form action = "chart-page" method = "POST">
     <table border="1" cellpadding="5"
@@ -59,5 +69,6 @@
     </tr>
     </table>
     </form>
+    </div>
 </div>
 <%@ include file="bottom.inc" %>

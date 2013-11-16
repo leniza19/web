@@ -25,13 +25,13 @@ h2 {
     font-size: 3.0em; 
     text-align: left; 
     padding: 10px; 
-<<<<<<< HEAD
+
     background: #3366FF; 
     
-=======
-    background: #8FABFF url(../img/styles/mathchem.png) no-repeat; 
->>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
-    
+
+    /*background: #8FABFF url(../img/styles/mathchem.png) no-repeat; 
+
+    */
     /*
     background: -moz-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* Firefox 3.6+ */
     /* Chrome 1-9, Safari 4-5 */
@@ -84,19 +84,19 @@ h2 {
     background: #fff; 	
 }
 #footer {
-<<<<<<< HEAD
+
     background: #FF8719; 
     color: LightGray; 
     padding: 5px; 
     clear: left; 
     border-top: 1px white solid;
-=======
-    background: rgba(255,235,129,0.6);; 
+
+    /*background: rgba(255,235,129,0.6);; 
     color: #A68D08; 
     padding: 5px; 
     clear: left; 
     border-top: 2px #FFE453 solid;
->>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
+*/
 }
 
 
@@ -159,21 +159,21 @@ img {
         /*text-decoration: none;*/
 		color: #1136A6;
         display: block;
-<<<<<<< HEAD
+
 		background-color: #668CAA;
-=======
+
 		/*background-color: SteelBlue;*/
->>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
+
         padding: 1px 8px;
 		margin-top: 1px;
         }
 #menu14 li a:hover {
-<<<<<<< HEAD
+
 		color: #668CFF;
-=======
+
 		/*color: CornflowerBlue;*/
 		background: rgba(255,190,129,0.5);
->>>>>>> aa21b0396dc59e9efdee27477ba1c69e230fcf52
+
         }
         
 

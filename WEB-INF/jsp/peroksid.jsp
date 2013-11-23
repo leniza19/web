@@ -6,15 +6,8 @@
 <jsp:useBean id="zamerItems" scope="request" type="java.util.List" />
 <jsp:useBean id="catalystItems" scope="request" type="java.util.List" />
 <jsp:useBean id="constItems" scope="request" type="java.util.List" />
-
 <%@ include file="top.jspf" %>
-<!-- <ul class="menu">
-   <li class="current" onclick="showInfo()" ><a>Общая информация</a></li>
-   <li class="unselected" onclick="drawPlotPeroksid(); showselectTemperDiv();" ><a>Расчеты</a></li>
-   <li onclick="showCalculator()" ><a>Калькулятор молярности</a></li>
-   <li onclick="showVizual()" ><a>Визуализация</a></li>
-  </ul>
- -->
+
  
  
 <div id="main-content">

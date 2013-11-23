@@ -6,9 +6,27 @@
 <jsp:useBean id="materialItems" scope="request" type="java.util.List" />
 <%@ include file="top.jspf"%>
 
+
+
+
+ <div id="main-content">
+<div style="float:left;width: 100%; background:#FFA753; ">
+<div class="top-menu current-tab" onclick="ReactionBased(); changeCurrentTab(this)">Имеющиеся в базе реакции</div>
+<div class="top-menu standart-tab" onclick="MaterialBased(); changeCurrentTab(this)">Имеющиеся в базе вещества</div>
+	
+	
+	
 <div id="content">
+<div id="topOfRight" style="clear:left; margin: 10px; ">
+<div id="peroksidPlot" style="width:500px;height:250px; display: none"></div>
+<div id="peroksidPlot2" style="width:500px;height:250px; display: none"></div>
+</div>	
+		
+<div id="bottomOfRight" style="clear:left; margin: 10px;">
+<div id="mainInfo" >
 <h2>База данных кинетических исследований</h2>
 	<u>Список имеющих в базе реакций:</u>
+	
 	<table class="tbl_thin" border="0">
 		<tr>
 			<th>Название реакции</th>
@@ -28,65 +46,10 @@
 		</tr>
 		<% } %>
 	</table>
-	<br /> <u>Список имеющих в базе веществ:</u>
-	<table class="tbl_thin" border="0">
-		<tr>
-			<th>Химформула</th>
-			<th >Наблюдаемое</th>
-			<th>Промежуточное</th>
-			<th>Исходное</th>
-			<th>Продукт</th>
-		</tr>
-		<% 
-      it = materialItems.iterator();
-      while (it.hasNext())
-      {
-    	  MaterialItem materialItem = (MaterialItem) it.next();
-   %>
-		<tr>
-			<td><%=materialItem.getChemF()%></td>
-			<td style="text-align: center;"><b>
-				<% 
-			if (materialItem.isObserv()==true) 
-			{
-				%> + <% 
-			}
-			else  
-			{
-			%> &mdash; <%} %>
-			</b></td>
-			<td style="text-align: center;">
-				<% 
-			if (materialItem.isInterm()==true) 
-			{
-				%> + <% 
-			}
-			else  
-			{
-			%> &mdash; <%} %>
-			</td>
-			<td style="text-align: center;">
-				<% 
-			if (materialItem.isSource()==true) 
-			{
-				%> + <% 
-			}
-			else  
-			{
-			%> &mdash; <%} %>
-			</td>
-			<td style="text-align: center;">
-				<% 
-			if (materialItem.isProduct()==true) 
-			{
-				%> + <% 
-			}
-			else  
-			{
-			%> &mdash; <%} %>
-			</td>	
-		</tr>
-		<% } %>
-	</table>
-</div>
+
+	
+
+
+
+
 <%@ include file="bottom.inc"%>

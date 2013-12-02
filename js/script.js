@@ -13,7 +13,7 @@ function onld() {
 	document.getElementById("content").style.height = 
 		(windowHeight-footerHeight-middleMenuHeight-headerHeight-20)+"px";	
 	document.getElementById("left").style.height = 
-		(document.getElementById("content").offsetHeight+middleMenuHeight-20)+'px';
+		(document.getElementById("content").offsetHeight+middleMenuHeight)+'px';
 	
 	if(document.getElementById("oxygenInfoFlashOuter"))
 	{

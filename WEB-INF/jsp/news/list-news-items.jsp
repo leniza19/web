@@ -38,7 +38,7 @@
 	  <% }%>
 	  </td></tr>
       <tr><td style="display:none;"><%=newsItem.getId()%></td>
-      <td style="font-size: 16px;color: #0094D6;"><b><%=newsItem.getTitle()%>
+      <td style="font-size: 16px;color: #304CBF;"><b><%=newsItem.getTitle()%>
       </b>
       </td>      
       </tr>

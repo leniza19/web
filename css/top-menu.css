@@ -16,7 +16,10 @@
 .standart-tab {
 	border-top: 1px solid #FFA753;
 	color: #A65508;
-	background:#FFA753; 
+	background:#FFBA73; 
 	cursor: pointer;
 	border-bottom: 1px solid #FFA753;
+}
+.notlink {
+	background:#FFBA73; 
 }

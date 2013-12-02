@@ -18,31 +18,36 @@
 <script type="text/javascript" src="./js/flot.js"></script>
 <script type="text/javascript" src="./js/vizual.js"></script>
 <script type="text/javascript" src="./js/employee_info.js"></script>
+<script type="text/javascript" src="./js/bd.js"></script>
 
 </head>
 
 <body onload="onld();">
 	<div id="container">
 		<div id="header">
+			<div id="logoDiv" style=" float: left;height: 50px;">
+			</div>
+			<div style="display: table-cell; padding-left: 10px;padding-top: 10px">
 			<h2>Web-лаборатория математической химии</h2>
+			</div>
 			<!-- Begin Page Content -->
-    <div id="container3">
-        <form action = "controller" method = "POST">
-            <label for="username" class="labelLogin">Логин:</label>
-            <input type="text" id="username" name="username">
-            <label for="password" class="labelLogin">Пароль:</label>           
-            <input type="password" id="password" name="password">
-			<input type="submit" value="Вход">
-            <!--<div id="lower">
-                <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-                <input type="submit" value="Login">
-            </div>
-			<!--/ lower-->
-        </form>
-    </div><!--/ container-->
-	<div id="loginButton" onclick="func();">
-	</div>
-    <!-- End Page Content -->
+    		<div id="container3">
+        	<form action = "controller" method = "POST">
+            	<label for="username" class="labelLogin">Логин:</label>
+            	<input type="text" id="username" name="username">
+            	<label for="password" class="labelLogin">Пароль:</label>           
+            	<input type="password" id="password" name="password">
+				<input type="submit" value="Вход">
+            	<!--<div id="lower">
+                	<input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
+                	<input type="submit" value="Login">
+            	</div>
+				<!--/ lower-->
+        	</form>
+    		</div><!--/ container-->
+			<div id="loginButton" onclick="func();">
+			</div>
+    		<!-- End Page Content -->
 		</div>
 		
 		<div id="left">

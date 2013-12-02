@@ -3,7 +3,7 @@
 
 <div id="main-content">
 
-	<div style="float:left;width: 100%; background:#FFA753; ">
+	<div style="float:left;width: 100%; " class="notlink">
 	<div class="top-menu current-tab" onclick="goToPage('controller?go=oxygen-info'); ">Информация</div>
 	<div class="top-menu standart-tab" onclick="goToPage('controller?go=zerno-form');">Зерно катализатора</div>
 	<div class="top-menu standart-tab" onclick="goToPage('controller?go=isoterm-form');">Неподвижный слой</div>

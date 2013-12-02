@@ -2,7 +2,7 @@
 <%@ include file="top.jspf" %>
 
 <div id="main-content">
-<div style="float:left;width: 100%; background:#FFA753; ">
+<div style="float:left;width: 100%; " class="notlink">
 	<div class="top-menu current-tab">Общая информация</div>	
 </div>
 <div id="content">

@@ -18,33 +18,14 @@ h2 {
     background: #F3F8F8;
 }
 #container h2{
-	color: #FF8719;
+	color: #A65400;
 }
 #header {
     height: 50px;
     font-size: 3.0em; 
     text-align: left; 
-    padding: 10px; 
-
-    background: #3366FF; 
-    
-
-    /*background: #8FABFF url(../img/styles/mathchem.png) no-repeat; 
-
-    */
-    /*
-    background: -moz-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* Firefox 3.6+ */
-    /* Chrome 1-9, Safari 4-5 */
-    /*background: -webkit-gradient(linear, left top, left bottom, 
-                color-stop(0%,#fefcea), color-stop(100%,#f1da36));
-    /* Chrome 10+, Safari 5.1+ */
-    /*background: -webkit-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB );
-    /*background: -o-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* Opera 11.10+ */
-    /*background: -ms-linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* IE10 */
-    /*background: linear-gradient(right top, #8FB3EB, #ccf, #8FB3EB); /* CSS3 */ 
-    /*background-image: url('images/header.jpg');
-    background-repeat: no-repeat;
-    background-position: top right;*/
+    /*background: #8FABFF url(../img/styles/1.png) no-repeat;*/
+    background: #8FABFF; 
     color: #fff; 
 }
 #header h1 {
@@ -59,7 +40,12 @@ h2 {
     margin-top: 0px; 
     color: #1136a6; 
 }
-
+#logoDiv {
+	background: url(../img/styles/1.png) no-repeat;
+	border-right: 1px solid gray;
+	width: 199px;
+	display: table-cell;
+}
 
 #left {
     margin: 0px;
@@ -68,8 +54,6 @@ h2 {
     padding: 0px; 
     float: left; 
     border-right: 1px solid lightgray;
-    /*background-color: #787878;*/ 
-    /*background: black url(../img/styles/chemistry-5.jpg) right bottom no-repeat;*/
 }
 #content {
     margin: 0px; 
@@ -84,19 +68,11 @@ h2 {
     background: #fff; 	
 }
 #footer {
-
-    background: #FF8719; 
-    color: LightGray; 
+    background: #FFBA73;
+	color: #A65400;
     padding: 5px; 
     clear: left; 
     border-top: 1px white solid;
-
-    /*background: rgba(255,235,129,0.6);; 
-    color: #A68D08; 
-    padding: 5px; 
-    clear: left; 
-    border-top: 2px #FFE453 solid;
-*/
 }
 
 
@@ -153,31 +129,18 @@ img {
 		
 #menu14 li a,#menu14 li b {
         height: 18px;
-          voice-family: "\"}\"";
-          voice-family: inherit;
-          height: 24px;
-        /*text-decoration: none;*/
+        voice-family: "\"}\"";
+        voice-family: inherit;
+        height: 24px;
 		color: #1136A6;
         display: block;
-
-		background-color: #668CAA;
-
-		/*background-color: SteelBlue;*/
-
         padding: 1px 8px;
 		margin-top: 1px;
         }
-#menu14 li a:hover {
-
-		color: #668CFF;
-
-		/*color: CornflowerBlue;*/
-		background: rgba(255,190,129,0.5);
-
-        }
         
-
-		
+#menu14 li a:hover {
+		color: #668CFF;
+        }
 		
 .menu {
     font-weight: bold;

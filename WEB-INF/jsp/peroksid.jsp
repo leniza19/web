@@ -11,7 +11,7 @@
  
  
 <div id="main-content">
-<div style="float:left;width: 100%; background:#FFA753; ">
+<div style="float:left;width: 100%; " class="notlink">
 	<div class="top-menu current-tab" onclick="showInfo(); changeCurrentTab(this)">Общая информация</div>
 	<div class="top-menu standart-tab" onclick="drawPlotPeroksid(); showselectTemperDiv(); changeCurrentTab(this)">Расчеты</div>
 	<div class="top-menu standart-tab" onclick="showCalculator(); changeCurrentTab(this)">Калькулятор молярности</div>

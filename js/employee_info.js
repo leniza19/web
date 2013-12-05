@@ -1,6 +1,7 @@
-﻿function showMainInfo (info) {
+﻿function showMainInfo (employerName,info) {
+	var JsonFile = 'json/' + employerName+'.json';
 	
-	$.getJSON('json/irekmars.json', function(data) {
+	$.getJSON(JsonFile, function(data) {
 		var innerHtml = "";
 		
 		switch (info){
@@ -14,7 +15,7 @@
 				
 				break;
 			case "articles": 
-				innerHtml += "<b>Натболее значимые публикации:</b>";
+				innerHtml += "<b>Наиболее значимые публикации:</b>";
 				for ( var i = 0; i < data.articles.length; i++) {
 					innerHtml += "<br>" + data.articles[i];
 				}

@@ -13,6 +13,7 @@
 <script language="javascript" type="text/javascript" src="./jquery/jquery.js"></script>
 <script language="javascript" type="text/javascript" src="./jquery/jquery.flot.js"></script>
 <script language="javascript" type="text/javascript" src="./jquery/jquery.flot.axislabels.js"></script>    
+<script language="javascript" type="text/javascript" src="./jquery/jquery.flot.categories.js"></script>
     
 <script type="text/javascript" src="./js/script.js"></script>
 <script type="text/javascript" src="./js/flot.js"></script>
@@ -61,21 +62,24 @@
 					<li><a href="list-reaction-items"><span>База данных КИ</span></a></li>					
 					
 					<li><a href="list-article-items"><span>Публикации</span></a></li>
-					<li><b>Расчеты:</b></li>
-					<li><a href="controller?go=oxygen-info"><span>-- Окис. регенерация</span></a></li>
-					<li><a href="peroksid"><span>   -- Разложение H<sub>2</sub>O<sub>2</sub></span></a></li>
-					<li><a href="controller?go=etilen-info"><span>-- Окисление окиси этилена</span></a></li>					 
+										 
 					
-					<% if (session.getAttribute("id") != null) { 
-						int currentId = Integer.parseInt(session.getAttribute("id").toString());
-					if (currentId==2) { 
+					<% if (session.getAttribute("userPermission") != null) { 
+						int userPermissionJSP = Integer.parseInt(session.getAttribute("userPermission").toString());
+					if (userPermissionJSP>=1) { 
 					%>
+					
+					<li><b>Расчеты:</b></li>
+					<li><a href="controller?go=oxygen-info"><span>-- Окислительная регенерация</span></a></li>
+					<li><a href="peroksid"><span>   -- Разложение H<sub>2</sub>O<sub>2</sub></span></a></li>
+					<!-- <li><a href="controller?go=etilen-info"><span>-- Окисление окиси этилена</span></a></li> -->
+					
 					<!-- <li><a href="list-article-items"><span>Публикации</span></a></li>
 					<li><b>Расчеты:</b></li>
 					<li><a href="controller?go=oxygen-info"><span>-- Окислительная регенерация</span></a></li>
 					<li><a href="peroksid"><span>   -- Разложение H<sub>2</sub>O<sub>2</sub></span></a></li>
 					<li><a href="controller?go=etilen-info"><span>-- Окисление окиси этилена</span></a></li>
-					<li><a href="controller?go=etilen-info"><span>-- Пиролиз этана</span></a></li>  -->
+					 -->
 					<%
 					}
 					}%>

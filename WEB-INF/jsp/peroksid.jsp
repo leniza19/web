@@ -16,6 +16,7 @@
 	<div class="top-menu standart-tab" onclick="drawPlotPeroksid(); showselectTemperDiv(); changeCurrentTab(this)">Расчеты</div>
 	<div class="top-menu standart-tab" onclick="showCalculator(); changeCurrentTab(this)">Калькулятор молярности</div>
 	<div class="top-menu standart-tab" onclick="showVizual(); changeCurrentTab(this)">Визуализация</div>
+	<div class="top-menu standart-tab" onclick="showDiagramm(); changeCurrentTab(this)">Диаграмма активности</div>
 </div>
 
 <div id="content">
@@ -25,6 +26,7 @@
 <div id="topOfRight" style="clear:left; margin: 10px; ">
 <div id="peroksidPlot" style="width:500px;height:250px; display: none"></div>
 <div id="peroksidPlot2" style="width:500px;height:250px; display: none"></div>
+<div id="peroksidPlotActivity" style="width:500px;height:250px; display: none"></div>
 </div>
 
 <div id="bottomOfRight" style="clear:left; margin: 10px;">
@@ -90,8 +92,11 @@ style="float: left; margin-right: 5px; width:580px;">
 </div>
 <br>
 <div style='display: block;'>
-<u>Экспериментальные данные (лаб. приготовления катализаторов):</u>
-	<table id="exp_table" class="tbl_thin" border="0">
+ 
+ <!--  
+  <u>Экспериментальные данные (лаб. приготовления катализаторов):</u>
+   -->
+	<table id="exp_table" class="tbl_thin" border="0" style="display: none">
 		<tr>
 			<th>№ эксперимента</th>
 			<th>Время, час</th>
@@ -111,7 +116,7 @@ style="float: left; margin-right: 5px; width:580px;">
 		<% } %>
 	</table>
 	<br>
-	<table id="catalyst_table" class="tbl_thin" border="0">
+	<table id="catalyst_table" class="tbl_thin" border="0" style="display: none">
 		<tr>
 			<th>№ расчета</th>
 			<th>Катализатор</th>
@@ -135,7 +140,7 @@ style="float: left; margin-right: 5px; width:580px;">
 		<% } %>
 	</table>
 	<br>
-	<table id="constant_table" class="tbl_thin" border="0">
+	<table id="constant_table" class="tbl_thin" border="0" style="display: none">
 		<tr>
 			<th>№ расчета</th>
 			<th>№ эксперимента</th>			

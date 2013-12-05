@@ -138,31 +138,69 @@ function drawVizualGraf(currentExp) {
 };
 
 function showVizual() {
-	document.getElementById('peroksidPlot2').style.display      = 'block';
+	
+	$.getJSON('json/exp.json', function(data) {
+				
+		//alert(data);
+		//document.getElementById('content').innerHTML = innerHtml;
+		document.getElementById('peroksidPlot2').style.display      = 'block';
+		
+		document.getElementById('selectTemperDiv').style.display = 'none';
+		document.getElementById('characteristics').style.display = 'none';
+		document.getElementById('catComboDiv').style.display     = 'none';
+		document.getElementById('mainInfo').style.display    	 = 'none';
+		document.getElementById('peroksidPlot').style.display    = 'none';
+		document.getElementById('peroksidPlotActivity').style.display      = 'none';
+		
+		var catalyst_table = document.getElementById('catalyst_table');
+
+	    var rowLength = catalyst_table.rows.length;
+
+	    var calcData = []; 
+	    
+	    var catVizualCombo = document.getElementById('catVizualCombo');    
+	    
+	    for (i = 1; i < rowLength; i++){
+	       var oCells = catalyst_table.rows.item(i).cells;
+	       calcData.push([oCells.item(0).innerHTML,oCells.item(1).innerHTML]);
+	       catVizualCombo.options[i-1] = new Option(oCells.item(1).innerHTML, 
+	    		   oCells.item(0).innerHTML);
+	    }    
+	    
+	    drawSelectTemperVizualDiv();
+	    
+		document.getElementById('catVizualComboDiv').style.display = 'table-cell';
+		document.getElementById('selectTemperVizualDiv').style.display = "table-cell";		
+	});
+
+};
+function showDiagramm() {
 	
 	document.getElementById('selectTemperDiv').style.display = 'none';
-	document.getElementById('characteristics').style.display = 'none';
 	document.getElementById('catComboDiv').style.display     = 'none';
+	document.getElementById('characteristics').style.display = 'none';
 	document.getElementById('mainInfo').style.display    	 = 'none';
 	document.getElementById('peroksidPlot').style.display    = 'none';
+	document.getElementById('catVizualComboDiv').style.display = 'none';
+	document.getElementById('selectTemperVizualDiv').style.display = "none";
+	document.getElementById('peroksidPlot2').style.display      = 'none';
+	document.getElementById('peroksidPlotActivity').style.display      = 'block';
 	
-	var catalyst_table = document.getElementById('catalyst_table');
+	var data = [ ["Cat. No 216", 50.437], ["Cat. No 213", 58.738], ["Cat. No 655", 62.438], 
+	             ["Cat. No 642", 63.031], ["Cat. No 215", 79.625], ["Cat. No 651", 99.858] ];	
 
-    var rowLength = catalyst_table.rows.length;
+	$.plot("#peroksidPlotActivity", [ data ], {
+		series: {
+			bars: {
+				show: true,
+				barWidth: 0.6,
+				align: "center"
+			}
+		},
+		xaxis: {
+			mode: "categories",
+			tickLength: 0
+		}
+	});
 
-    var calcData = []; 
-    
-    var catVizualCombo = document.getElementById('catVizualCombo');    
-    
-    for (i = 1; i < rowLength; i++){
-       var oCells = catalyst_table.rows.item(i).cells;
-       calcData.push([oCells.item(0).innerHTML,oCells.item(1).innerHTML]);
-       catVizualCombo.options[i-1] = new Option(oCells.item(1).innerHTML, 
-    		   oCells.item(0).innerHTML);
-    }    
-    
-    drawSelectTemperVizualDiv();
-    
-	document.getElementById('catVizualComboDiv').style.display = 'table-cell';
-	document.getElementById('selectTemperVizualDiv').style.display = "table-cell";
-};
+}

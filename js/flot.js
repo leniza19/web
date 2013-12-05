@@ -4,6 +4,8 @@
 	document.getElementById('catVizualComboDiv').style.display = 'none';
 	document.getElementById('selectTemperVizualDiv').style.display = "none";
 	document.getElementById('peroksidPlot2').style.display      = 'none';
+	document.getElementById('peroksidPlotActivity').style.display      = 'none';
+	
 	var x = document.getElementsByName('temperature');
 	var curTemp = 0;
     for(var k=0;k<x.length;k++) {
@@ -261,10 +263,13 @@
 //		c00[i] = Math.exp((sumY+k[i]*sumX)/n);
 
 //		учитваем первую точку
-		c00[i] = C[i][0];
-		k[i] = -(sumXY-Math.log(C[i][0])*sumX)/sumX2;
+//		c00[i] = C[i][0];
+//		k[i] = -(sumXY-Math.log(C[i][0])*sumX)/sumX2;
 
-		//		k[i] = -(sumY-n*Math.log(C[i][0]*sumX))/sumX;
+
+		k[i] = (sumX*sumY-n*sumXY)/(n*sumX2-sumX*sumX);
+		c00[i] = Math.exp((sumY+k[i]*sumX)/n);
+		
 	}
 	
 	//k[1] = 0.30978; c00[1] = Math.exp(-3.5665);
@@ -516,6 +521,7 @@ function showInfo () {
 	document.getElementById('catVizualComboDiv').style.display = 'none';
 	document.getElementById('selectTemperVizualDiv').style.display = "none";
 	document.getElementById('peroksidPlot2').style.display      = 'none';
+	document.getElementById('peroksidPlotActivity').style.display      = 'none';
 }
 function showCalculator () {
 	var labelDiv = null;
@@ -626,7 +632,7 @@ function showCalculator () {
 	document.getElementById('catVizualComboDiv').style.display = 'none';
 	document.getElementById('selectTemperVizualDiv').style.display = "none";
 	document.getElementById('peroksidPlot2').style.display      = 'none';
-		
+	document.getElementById('peroksidPlotActivity').style.display      = 'none';	
 }
 //--------------------------------------------------------------------------
 function calcBtnClick() {

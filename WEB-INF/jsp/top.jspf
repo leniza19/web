@@ -70,8 +70,9 @@
 					%>
 					
 					<li><b>Расчеты:</b></li>
-					<li><a href="controller?go=oxygen-info"><span>-- Окислительная регенерация</span></a></li>
-					<li><a href="peroksid"><span>   -- Разложение H<sub>2</sub>O<sub>2</sub></span></a></li>
+					<li><a href="controller?go=oxygen-info"><span>-- Окис. регенерация</span></a></li>
+					<li><a href="peroksid"><span>-- Окисление фенолов</span></a></li>
+					<!--<li><a href="peroksid"><span>   -- Разложение H<sub>2</sub>O<sub>2</sub></span></a></li>-->
 					<!-- <li><a href="controller?go=etilen-info"><span>-- Окисление окиси этилена</span></a></li> -->
 					
 					<!-- <li><a href="list-article-items"><span>Публикации</span></a></li>

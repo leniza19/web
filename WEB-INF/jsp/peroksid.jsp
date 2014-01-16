@@ -13,7 +13,7 @@
 <div id="main-content">
 <div style="float:left;width: 100%; " class="notlink">
 	<div class="top-menu current-tab" onclick="showInfo(); changeCurrentTab(this)">Общая информация</div>
-	<div class="top-menu standart-tab" onclick="drawPlotPeroksid(); showselectTemperDiv(); changeCurrentTab(this)">Расчеты</div>
+	<div class="top-menu standart-tab" onclick="drawPlotPeroksid(); showselectTemperDiv(); changeCurrentTab(this)">Разложение H<sub>2</sub>O<sub>2</sub></div>
 	<div class="top-menu standart-tab" onclick="showCalculator(); changeCurrentTab(this)">Калькулятор молярности</div>
 	<div class="top-menu standart-tab" onclick="showVizual(); changeCurrentTab(this)">Визуализация</div>
 	<div class="top-menu standart-tab" onclick="showDiagramm(); changeCurrentTab(this)">Диаграмма активности</div>

@@ -23,7 +23,7 @@
 	</tr>
 </table>
 <hr align="center" width="100%" size="2" />
-<table border="0">
+<table border="0" style="width: 100%">
 
    <% 
       Iterator it = newsItems.iterator();

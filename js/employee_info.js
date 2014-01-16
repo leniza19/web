@@ -5,9 +5,9 @@
 		var innerHtml = "";
 		
 		switch (info){
-			case "maininfo": 
-				innerHtml += "<b>Биографическая справка</b>";
+			case "maininfo": 				
 				innerHtml += "<br><img src='img/employees/" + data.photo+ "' style='float: left; margin-right: 5px;'>";
+				innerHtml += "<b>Биографическая справка</b>";
 					
 				for ( var i = 0; i < data.biography.length; i++) {
 					innerHtml += "<br>" + data.biography[i];

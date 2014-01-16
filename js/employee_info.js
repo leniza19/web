@@ -24,9 +24,9 @@
 			case "aspirants": 
 				innerHtml += data.aspirants;
 				break;
-		default : alert("nothing");
+		default : innerHtml = "";
 		}		
-		
+				
 		document.getElementById('content').innerHTML = innerHtml;
 				
 	});

@@ -103,6 +103,17 @@ version="2.4">
       <url-pattern>/delete-user-items</url-pattern>
    </servlet-mapping>
 
+  
+    <servlet>
+      <servlet-name>inverse</servlet-name>
+      <servlet-class>mathchem.web.InverseServlet</servlet-class>
+      
+   </servlet>
+
+   <servlet-mapping>
+      <servlet-name>inverse</servlet-name>
+      <url-pattern>/inverse</url-pattern>
+   </servlet-mapping>
    
    
    

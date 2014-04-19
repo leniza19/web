@@ -17,6 +17,7 @@
 	<div class="top-menu standart-tab" onclick="showCalculator(); changeCurrentTab(this)">Калькулятор молярности</div>
 	<div class="top-menu standart-tab" onclick="showVizual(); changeCurrentTab(this)">Визуализация</div>
 	<div class="top-menu standart-tab" onclick="showDiagramm(); changeCurrentTab(this)">Диаграмма активности</div>
+	<div class="top-menu standart-tab" onclick="startGa(); changeCurrentTab(this)">Обратная задача</div>
 </div>
 
 <div id="content">
@@ -87,6 +88,10 @@ style="float: left; margin-right: 5px; width:580px;">
 
 <div id="selectTemperVizualDiv" style="width: 100px; position: relative; display: none;">
 </div>
+ 
+<div id="visualGa" style="width: 100px; position: relative; display: none;">
+</div> 
+ 
     
 <div id="characteristics" style="position: relative; display: none;">
 </div>

@@ -28,9 +28,9 @@
 			  [C0,0.0709,0.0667,0.0614,0.0486],
 			  [C0,0.0556,0.0400,0.0266,0.0129]];
 		 
-		 t  = [[0.0,0.25,0.5,1.0,2.0],
-		       [0.0,0.25,0.5,1.0,2.0],
-		       [0.0,0.33,0.5,1.0,2.0]];
+		 t  = [[0,0.25,0.5,1.0,2.0],
+		       [0,0.25,0.5,1.0,2.0],
+		       [0,0.33,0.5,1.0,2.0]];
 		break;
 	 case "215":		 
 		 T= [30,50,50,50,50,75,75]; // температура
@@ -75,50 +75,6 @@
 	       [0,0.25,0.5,1.0],
 	       [0,0.25]];
 		 
-//		 ---------------------
-
-//		 T= [35,40,50,60,75]; // температура
-//		 
-//		 C0 = 0.0656;
-//		 
-//		 C = [[C0,0.0608,0.0573,0.0503],
-//		      [0.0697,0.0661,0.0626,0.0602,0.0567],
-//		  [C0,0.0457,0.0277,0.0011],
-//		  [0.0697,0.0355,0.0026],
-//		  [C0,0.0001]];
-//
-//		 t  = [[0,0.25,0.5,1.0],
-//		       [0,0.25,0.5,0.75,1],
-//	       [0,0.25,0.5,1.0],
-//	       [0,0.25,0.5],
-//	       [0,0.25]];
-
-
-//		 T= [50,75]; // температура
-		 
-//
-//		 C = [[C0,0.0457,0.0277,0.0011],
-//		      [C0,0.0001]];
-//		 
-//		 
-//		 t  = [[0,0.25,0.5,1.0],
-//		       [0,0.25]];
-		 
-//		 T= [35,75]; // температура
-//		 C0 = 0.0656;
-//
-//		 C = [[C0,0.0608,0.0573,0.0503],			  
-//			  [C0,0.0001]];		 
-//		 
-//		 t  = [[0,0.25,0.5,1.0],		       
-//		       [0,0.25]];
-		 
-//		 T= [35,50]; // температура
-//		 C = [[C0,0.0608,0.0573,0.0503],
-//		  [C0,0.0457,0.0277,0.0011]];
-//
-//		 t  = [[0,0.25,0.5,1.0],
-//	       [0,0.25,0.5,1.0]];
 		break;
 	
 	 case "220":	
@@ -242,7 +198,6 @@
 	}	
 	
 	var k00;  var E00; 
-	//HG();
 	
 	var k = []; var c00 = [];
 	 
@@ -258,21 +213,11 @@
 			sumX2 += t[i][j]*t[i][j];
 		}
 		
-//		без учета первой точки 
-//		k[i] = (sumX*sumY-n*sumXY)/(n*sumX2-sumX*sumX);
-//		c00[i] = Math.exp((sumY+k[i]*sumX)/n);
-
-//		учитваем первую точку
-//		c00[i] = C[i][0];
-//		k[i] = -(sumXY-Math.log(C[i][0])*sumX)/sumX2;
-
-
 		k[i] = (sumX*sumY-n*sumXY)/(n*sumX2-sumX*sumX);
 		c00[i] = Math.exp((sumY+k[i]*sumX)/n);
 		
 	}
 	
-	//k[1] = 0.30978; c00[1] = Math.exp(-3.5665);
 	n = T.length;
 	if (n===1) {
 		E00 = "недостаточно данных";
@@ -292,9 +237,6 @@
 		k00 = (Math.exp((sumY-a*sumX)/n)).toFixed(4);	
 	}
 	
-	// GA
-	//E00 = 35656; k00 = 1000025;
-	
 	var N2 = 31;    
     
 	var con;
@@ -308,9 +250,9 @@
 	} else {
 		totalError = F(E00,k00).toFixed(3);
 		con = k00*Math.exp(-E00/(R*T[curTemp]));
-//		con = k[curTemp];
 		kal = (E00*0.2389).toFixed(3);
 		E00 = E00.toFixed(3);
+		k00 = Math.log(k00).toFixed(3);
 	}
 	
     var h = 0.5;
@@ -319,124 +261,62 @@
 
     var error = 0;
     for (var i = 0; i <N2; i++)    {
-//    	calc.push([i*h, analyticSolution(C[curTemp][0],con,i*h)]);
     	calc.push([i*h, analyticSolution(c00[curTemp],con,i*h)]);
     }
 	for (var i = 0; i < C[curTemp].length; i++) {
-//		var analyticSol = analyticSolution(C[curTemp][0],con,t[curTemp][i]);
 		var analyticSol = analyticSolution(c00[curTemp],con,t[curTemp][i]);
     	error += Math.abs(analyticSol-C[curTemp][i]);
         experiment.push([t[curTemp][i], C[curTemp][i]]);        
-//        experiment.push([t[curTemp][i], Math.log(C[curTemp][i])]);
     }
-	//error = error/C[curTemp].length;
 	
 	var pogr = 0;
+	var temp_count = 0;
 	for (var i = 0; i < C[curTemp].length; i++) {
 		var analyticSol = analyticSolution(c00[curTemp],con,t[curTemp][i]);
-    	pogr += Math.abs((analyticSol-C[curTemp][i])/C[curTemp][i]);        
+		if (Math.abs((analyticSol-C[curTemp][i])/C[curTemp][i]) < 1) {
+			pogr += Math.abs((analyticSol-C[curTemp][i])/C[curTemp][i]);
+			temp_count++;
+		}
     }
-	pogr = (pogr/C[curTemp].length).toFixed(3);
+	pogr = (pogr*100/temp_count).toFixed(3);
+	
 	//--------------------------------------------------------
 	document.getElementById('characteristics').innerHTML = 
 		'<table style="margin-left: 10px;"><tr><td>E</td><td> = '+E00+' (Дж/моль) = '+
 		kal +' (кал/моль)' + '</td></tr>'+
-		'<tr><td>ln(k0)</td><td> = '+Math.log(k00).toFixed(3)+' (1/ч)</td></tr>' +
+		'<tr><td>ln(k0)</td><td> = '+k00+' (1/ч)</td></tr>' +
 		'<tr><td>k</td><td> = '+(k[curTemp].toFixed(3)).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+' (1/ч)</td></tr>' +
-		'<tr><td>con</td><td> = '+(con.toFixed(4)).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+' (1/ч)</td></tr>' +
-		'<tr><td>c00</td><td> = '+(c00[curTemp].toFixed(4)).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+' (1/ч)</td></tr>' +
+		'<tr><td>con</td><td> = '+(con.toFixed(4))+' (1/ч)</td></tr>' +
+		'<tr><td>c00</td><td> = '+(c00[curTemp].toFixed(4))+' (моль.д.)</td></tr>' +
 		'<tr><td>error</td><td> = '+ error.toFixed(3) +'</td></tr>'+
-		'<tr><td>total error</td><td> = '+ totalError +' (моль.д.)</td></tr>'+
-		'<tr><td>погрешность</td><td> = '+ pogr +' (моль.д.)</td></tr>'+
+		'<tr><td>отн. погреш.</td><td> = '+ totalError +' %</td></tr>'+
+		'<tr><td>погрешность для дан.темп.</td><td> = '+ pogr +' %</td></tr>'+
 		'</table>';	
 	//------------------------------------------------------	
 	function analyticSolution(_C0,_k0,_t) {
 		var _C = 0;
 		_C = _C0*Math.exp(-_k0*_t); // первый порядок
 //		_C = _C0/(_C0*_k0*_t+1); // второй порядок
-//		_C = Math.log(_C0)-_k0*_t; // первый порядок
 		return _C;
 	}
-	//--------------------------------------------------------
-	function HG () {
-		var epsK0 = 100;    var epsE = 70;
-		var hK0 = 1000;   var hE = 400;
-		k00 = 4000000;      E00 = 40000;
-		count = 0; var f=F(E00,k00);
-		var result = true;
-		while (result)
-		{
-			var f1;
-			var f2;
-			if (hK0 >= epsK0) {
-				f1 = F(E00,k00-hK0);
-				f2 = F(E00,k00+hK0);
-				if (f1<f) {
-					f = f1;
-					k00 = k00-hK0;
-				} else if (f2<f) {
-					f = f2;
-					k00 = k00+hK0;
-				} else
-					hK0 = hK0 / 2.;
-			}
-			if (hE >= epsE) {
-				f1 = F(E00-hE,k00);
-				f2 = F(E00+hE,k00);
-				if((E00-hE)<=30000) 
-					f1 = f + 1000;					
-				if((E00+hE)>=50000) 
-					f2 = f + 1000;
-//				if ((f1<f) && (E00-hE>30000)) {
-				if (f1<f) {
-					f = f1;
-					E00 = E00-hE;
-//				} else if ((f2<f) && (E00+hE<50000)) {
-				} else if (f2<f) {
-					f = f2;
-					E00 = E00+hE;
-				} else
-					hE = hE / 2.;
-			}
-
-			if (hK0<epsK0 && hE < epsE) {				
-				result = false;
-			}
-			if (count>10000000) {	
-				alert(count);
-				result = false;
-			}
-			count++;
-		}
-	}
+	
 	//----------------------------------------------------
 	function F(_E, _k0) {
-		var ff = 0.; 
+		var ff = 0; 
+		var count = 0;
 		for (var i = 0; i < C.length; i++) {
 			for ( var j = 0; j < C[i].length; j++) {
 				var exper = C[i][j];
 				var con = _k0*Math.exp(-_E/(R*T[i]));
-				var calc = analyticSolution(C[i][0],con,t[i][j]);
+				var calc = analyticSolution(c00[i],con,t[i][j]);
 					
-				ff += Math.abs(exper - calc);
-//				ff += Math.sqrt((exper - calc)*(exper - calc));
+				if (Math.abs((exper - calc)/calc) < 1) {	
+					ff += Math.abs((exper - calc)/calc);
+					count++;
+				}
 			}
-			/*var k=1; var sign = (analyticSolution(C[i][0],
-					_k0*Math.exp(-_E/(R*T[i])),t[i][k])-C[i][k])>=0;
-			var signNotChanged = true;
-			while (k<C[i].length && signNotChanged){
-				if(((analyticSolution(C[i][0],
-					_k0*Math.exp(-_E/(R*T[i])),t[i][k])-C[i][k])>=0)===sign)
-					signNotChanged = true;
-				else
-					signNotChanged = false;
-				k++;
-			}
-			if (signNotChanged===true) 
-				ff+=100000000;	
-				*/
 		}
-		return ff;
+		return (ff/count)*100;
 	}
 	//------------------------------------------------------
 		

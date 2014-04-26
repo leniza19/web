@@ -140,9 +140,7 @@ function drawVizualGraf(currentExp) {
 function showVizual() {
 	
 	$.getJSON('json/exp.json', function(data) {
-				
-		//alert(data);
-		//document.getElementById('content').innerHTML = innerHtml;
+						
 		document.getElementById('peroksidPlot2').style.display      = 'block';
 		
 		document.getElementById('selectTemperDiv').style.display = 'none';

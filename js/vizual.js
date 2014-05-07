@@ -146,7 +146,6 @@ function showVizual() {
 		document.getElementById('selectTemperDiv').style.display = 'none';
 		document.getElementById('characteristics').style.display = 'none';
 		document.getElementById('catComboDiv').style.display     = 'none';
-		document.getElementById('mainInfo').style.display    	 = 'none';
 		document.getElementById('peroksidPlot').style.display    = 'none';
 		document.getElementById('peroksidPlotActivity').style.display      = 'none';
 		
@@ -177,7 +176,6 @@ function showDiagramm() {
 	document.getElementById('selectTemperDiv').style.display = 'none';
 	document.getElementById('catComboDiv').style.display     = 'none';
 	document.getElementById('characteristics').style.display = 'none';
-	document.getElementById('mainInfo').style.display    	 = 'none';
 	document.getElementById('peroksidPlot').style.display    = 'none';
 	document.getElementById('catVizualComboDiv').style.display = 'none';
 	document.getElementById('selectTemperVizualDiv').style.display = "none";

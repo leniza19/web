@@ -128,6 +128,18 @@ version="2.4">
       <url-pattern>/peroksid</url-pattern>
    </servlet-mapping>
    
+   
+   <servlet>
+      <servlet-name>phenol</servlet-name>
+      <servlet-class>mathchem.web.PhenolServlet</servlet-class>
+      
+   </servlet>
+
+   <servlet-mapping>
+      <servlet-name>phenol</servlet-name>
+      <url-pattern>/phenol</url-pattern>
+   </servlet-mapping>
+   
    <servlet>
       <servlet-name>irekmars</servlet-name>
       <servlet-class>mathchem.web.employee.EmployeeServlet</servlet-class>
